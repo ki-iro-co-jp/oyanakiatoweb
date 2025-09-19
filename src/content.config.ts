@@ -35,4 +35,13 @@ const gallery = defineCollection({
 		}),
 });
 
-export const collections = { plates, reviews, gallery };
+const sponcers = defineCollection({
+	loader: file("src/data/sponcers.json"),
+	schema: z.object({
+		name: z.string(),
+		url: z.string(),
+		image: z.string(),
+	}),
+});
+
+export const collections = { plates, reviews, gallery, sponcers };

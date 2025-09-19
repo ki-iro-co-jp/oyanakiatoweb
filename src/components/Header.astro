@@ -2,10 +2,10 @@
 import { menuMain } from "~/data/menus.js";
 
 const rmTrailingSlash = (path: string): string => {
-  return path.endsWith("/") && path.length > 1 
-    ? path.slice(0, path.length - 1) 
-    : path;
-}
+	return path.endsWith("/") && path.length > 1
+		? path.slice(0, path.length - 1)
+		: path;
+};
 
 const pathname = rmTrailingSlash(Astro.url.pathname);
 ---
@@ -15,7 +15,9 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 		<nav class="flex items-center justify-between" aria-label="Global">
 			<a href="/" class="-m-1.5 p-1.5">
 				<!-- <p class="font-bold text-4xl text-brand-green">親なきあと問題<span class="text-brand-red bg-brand-red/5 px-3 ml-1 rounded-lg">アプリ</span></p> -->
-				<p class="font-bold text-4xl text-brand-green">ファミリアノート</p>
+				<p class="font-bold text-2xl text-brand-green">
+					ファミリアノート
+				</p>
 			</a>
 			<div class="flex lg:hidden">
 				<button
@@ -36,7 +38,8 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+						></path>
 					</svg>
 				</button>
 			</div>
@@ -53,7 +56,13 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 				}
 			</div>
 		</nav>
-		<div class="lg:hidden" x-ref="dialog" x-show="open" x-cloak aria-modal="true">
+		<div
+			class="lg:hidden"
+			x-ref="dialog"
+			x-show="open"
+			x-cloak
+			aria-modal="true"
+		>
 			<div
 				class="fixed inset-0 z-50 w-full overflow-y-auto bg-white px-8 py-6"
 				x-show="open"
@@ -67,9 +76,15 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 			>
 				<div class="flex items-center justify-between">
 					<a href="/" class="-m-1.5 p-1.5">
-						<p class="font-bold text-4xl text-brand-green">Astro<span class="text-brand-red">Pie</span></p>
+						<p class="font-bold text-2xl text-brand-green">
+							ファミリアノート
+						</p>
 					</a>
-					<button type="button" class="-m-2.5 p-2.5 text-brand-red" @click="open = false">
+					<button
+						type="button"
+						class="-m-2.5 p-2.5 text-brand-red"
+						@click="open = false"
+					>
 						<span class="sr-only">Close menu</span>
 						<svg
 							class="size-8"
@@ -80,7 +95,10 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 							aria-hidden="true"
 							data-slot="icon"
 						>
-							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M6 18 18 6M6 6l12 12"></path>
 						</svg>
 					</button>
 				</div>

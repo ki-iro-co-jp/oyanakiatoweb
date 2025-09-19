@@ -1,22 +1,7 @@
 export const menuMain = [
-    // {
-    //     name: "Home",
-    //     url: "/",
-    //     highlighted: false,
-    // },
-    // {
-    //     name: "Menu",
-    //     url: "/menu",
-    //     highlighted: false,
-    // },
-    // {
-    //     name: "About Us",
-    //     url: "/about-us",
-    //     highlighted: false,
-    // },
     {
-        name: "スポンサーの皆様",
-        url: "/gallery",
+        name: "スポンサーの皆さまへ",
+        url: "/sponcer",
         highlighted: false,
     },
     {

@@ -1,0 +1,68 @@
+---
+const sponcers = [
+	{
+		name: "株式会社XXX",
+		url: "https://ki-iro.co.jp/",
+		image: "public/images/sponcers/ki-iro.webp",
+	},
+	{
+		name: "株式会社XXX",
+		url: "https://ki-iro.co.jp/",
+		image: "public/images/sponcers/ki-iro.webp",
+	},
+	{
+		name: "株式会社XXX",
+		url: "https://ki-iro.co.jp/",
+		image: "public/images/sponcers/ki-iro.webp",
+	},
+	{
+		name: "株式会社XXX",
+		url: "https://ki-iro.co.jp/",
+		image: "public/images/sponcers/ki-iro.webp",
+	},
+	{
+		name: "株式会社XXX",
+		url: "https://ki-iro.co.jp/",
+		image: "public/images/sponcers/ki-iro.webp",
+	},
+	{
+		name: "株式会社XXX",
+		url: "https://ki-iro.co.jp/",
+		image: "public/images/sponcers/ki-iro.webp",
+	},
+	{
+		name: "株式会社XXX",
+		url: "https://ki-iro.co.jp/",
+		image: "public/images/sponcers/ki-iro.webp",
+	},
+	{
+		name: "株式会社XXX",
+		url: "https://ki-iro.co.jp/",
+		image: "public/images/sponcers/ki-iro.webp",
+	},
+];
+---
+
+<div class="w-full mt-8 bg-white rounded-lg">
+	<div
+		class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4"
+	>
+		{
+			sponcers.map((sponcer) => (
+				<a
+					class="rounded-lg shadow p-4 text-center display-block hover:shadow-lg transition-shadow duration-300"
+					href={sponcer.url}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img
+						src={sponcer.image}
+						alt="Sample 1"
+						class="rounded-md mb-2 w-full h-40 object-contain"
+					/>
+					<p class="font-semibold">{sponcer.name} 様</p>
+				</a>
+			))
+		}
+	</div>
+</div>

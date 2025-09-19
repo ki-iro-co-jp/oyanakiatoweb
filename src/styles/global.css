@@ -14,23 +14,23 @@
 
 @utility prose {
 	h1 {
-		font-size: --var(--text-5xl);
-	}
-
-	h2 {
-		font-size: var(--text-4xl);
-	}
-
-	h3 {
 		font-size: var(--text-3xl);
 	}
 
-	h4 {
+	h2 {
 		font-size: var(--text-2xl);
 	}
 
-	h5 {
+	h3 {
 		font-size: var(--text-xl);
+	}
+
+	h4 {
+		font-size: var(--text-lg);
+	}
+
+	h5 {
+		font-size: var(--text-lg);
 	}
 
 	h6 {
@@ -39,27 +39,27 @@
 
 	@variant lg {
 		h1 {
-			font-size: var(--text-6xl);
-		}
-
-		h2 {
-			font-size: var(--text-5xl);
-		}
-
-		h3 {
-			font-size: var(--text-4xl);
-		}
-
-		h4 {
 			font-size: var(--text-3xl);
 		}
 
-		h5 {
+		h2 {
 			font-size: var(--text-2xl);
 		}
 
-		h6 {
+		h3 {
 			font-size: var(--text-xl);
+		}
+
+		h4 {
+			font-size: var(--text-lg);
+		}
+
+		h5 {
+			font-size: var(--text-lg);
+		}
+
+		h6 {
+			font-size: var(--text-lg);
 		}
 	}
 
@@ -83,6 +83,7 @@
 
 	a {
 		color: var(--color-gray-700);
+
 		&:hover {
 			text-decoration: underline;
 		}
@@ -134,27 +135,27 @@ h6 {
 
 h1,
 .h1 {
-	@apply text-5xl lg:text-7xl;
+	@apply text-4xl lg:text-5xl;
 }
 
 h2,
 .h2 {
-	@apply text-5xl lg:text-6xl;
+	@apply text-3xl lg:text-4xl;
 }
 
 h3,
 .h3 {
-	@apply text-4xl lg:text-5xl;
+	@apply text-2xl lg:text-3xl;
 }
 
 h4,
 .h4 {
-	@apply text-3xl lg:text-4xl;
+	@apply text-xl lg:text-2xl;
 }
 
 h5,
 .h5 {
-	@apply text-2xl lg:text-3xl;
+	@apply text-xl lg:text-2xl;
 }
 
 h6,
@@ -194,9 +195,9 @@ p {
 	display: none !important;
 }
 
-section.bg-white + section.bg-white > .container,
-section.bg-brand-green + section.bg-brand-green > .container,
-section.bg-brand-red + section.bg-brand-red > .container {
+section.bg-white+section.bg-white>.container,
+section.bg-brand-green+section.bg-brand-green>.container,
+section.bg-brand-red+section.bg-brand-red>.container {
 	@apply pt-0;
 }
 
@@ -222,6 +223,7 @@ label {
 	font-weight: 300;
 	src: url("/fonts/inter/inter-v18-latin-300.woff2") format("woff2");
 }
+
 /* inter-300italic - latin */
 @font-face {
 	font-display: swap;
@@ -230,6 +232,7 @@ label {
 	font-weight: 300;
 	src: url("/fonts/inter/inter-v18-latin-300italic.woff2") format("woff2");
 }
+
 /* inter-regular - latin */
 @font-face {
 	font-display: swap;
@@ -238,6 +241,7 @@ label {
 	font-weight: 400;
 	src: url("/fonts/inter/inter-v18-latin-regular.woff2") format("woff2");
 }
+
 /* inter-italic - latin */
 @font-face {
 	font-display: swap;
@@ -246,6 +250,7 @@ label {
 	font-weight: 400;
 	src: url("/fonts/inter/inter-v18-latin-italic.woff2") format("woff2");
 }
+
 /* inter-500 - latin */
 @font-face {
 	font-display: swap;
@@ -254,6 +259,7 @@ label {
 	font-weight: 500;
 	src: url("/fonts/inter/inter-v18-latin-500.woff2") format("woff2");
 }
+
 /* inter-500italic - latin */
 @font-face {
 	font-display: swap;
@@ -262,6 +268,7 @@ label {
 	font-weight: 500;
 	src: url("/fonts/inter/inter-v18-latin-500italic.woff2") format("woff2");
 }
+
 /* inter-600 - latin */
 @font-face {
 	font-display: swap;
@@ -270,6 +277,7 @@ label {
 	font-weight: 600;
 	src: url("/fonts/inter/inter-v18-latin-600.woff2") format("woff2");
 }
+
 /* inter-600italic - latin */
 @font-face {
 	font-display: swap;
@@ -278,6 +286,7 @@ label {
 	font-weight: 600;
 	src: url("/fonts/inter/inter-v18-latin-600italic.woff2") format("woff2");
 }
+
 /* inter-700 - latin */
 @font-face {
 	font-display: swap;
@@ -286,6 +295,7 @@ label {
 	font-weight: 700;
 	src: url("/fonts/inter/inter-v18-latin-700.woff2") format("woff2");
 }
+
 /* inter-700italic - latin */
 @font-face {
 	font-display: swap;
@@ -294,6 +304,7 @@ label {
 	font-weight: 700;
 	src: url("/fonts/inter/inter-v18-latin-700italic.woff2") format("woff2");
 }
+
 /* inter-900 - latin */
 @font-face {
 	font-display: swap;
@@ -302,6 +313,7 @@ label {
 	font-weight: 900;
 	src: url("/fonts/inter/inter-v18-latin-900.woff2") format("woff2");
 }
+
 /* inter-900italic - latin */
 @font-face {
 	font-display: swap;
@@ -322,6 +334,7 @@ label {
 	box-sizing: border-box;
 	animation: animloader 2s linear infinite;
 }
+
 .loader::after {
 	content: "";
 	box-sizing: border-box;
@@ -338,15 +351,19 @@ label {
 	0% {
 		transform: translate(-8px, -8px);
 	}
+
 	25% {
 		transform: translate(-8px, 8px);
 	}
+
 	50% {
 		transform: translate(8px, 8px);
 	}
+
 	75% {
 		transform: translate(8px, -8px);
 	}
+
 	100% {
 		transform: translate(-8px, -8px);
 	}

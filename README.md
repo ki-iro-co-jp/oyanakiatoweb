@@ -2,6 +2,14 @@
 
 AstroPie is a free theme for the Astro framework, designed to provide a beautiful and functional starting point for your next restaurant or bistro website. Whether you're running an Italian restaurant, a cozy bistro, or any other type of dining establishment, AstroPie has you covered with its clean design and easy-to-use components.
 
+## 運用
+
+### スポンサー追加
+
+- src/components/SponcerGrid.astro のsponcersにレコード追加
+- public/images/sponcersに画像を追加
+
+
 ## 🌟 About AstroPie
 
 AstroPie is perfect for restaurant owners, developers, and designers who want to quickly set up a stylish and responsive website. It leverages modern web technologies to ensure a smooth and performant user experience.

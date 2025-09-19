@@ -2,43 +2,41 @@
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Hero from "~/components/Hero.astro";
-import { Picture, Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import Badge from "~/components/Badge.astro";
-import Button from "~/components/Button.astro";
-import ButtonCallUs from "~/components/ButtonCallUs.astro";
-import Grid from "~/components/Grid.astro";
 import Heading from "~/components/Heading.astro";
 import WideImage from "~/components/WideImage.astro";
-import ReviewSlider from "~/components/ReviewSlider.astro";
 
-// Images
 import Eyecatch from "~/assets/images/couple-5184589_1280_hero.png";
-import Pizza from "~/assets/images/pizza.png";
-import Spaghetti from "~/assets/images/spaghetti.png";
-import Fish from "~/assets/images/fish.png";
 import DecorativeImage from "~/assets/images/hospice-1797305_1280.jpg";
-import reviewAuthors from "~/assets/images/review-authors.png";
-import Dessert from "~/assets/images/dessert.png";
-import Mussels from "~/assets/images/mussels2.png";
+import App01mage from "~/assets/images/app_image01.png";
+import FlowersImage from "~/assets/images/flowers.png";
+import StorySlider from "~/components/StorySlider.astro";
+import SponcerGrid from "~/components/SponcerGrid.astro";
+import Button from "~/components/Button.astro";
 ---
 
-<Layout title="Home" pageTitle="Home" description="Welcome to our restaurant!">
+<Layout
+	title="Home"
+	pageTitle="ファミリアノート"
+	description="障害のある子を支えるための記録アプリ"
+>
 	<Section class:list={"bg-white"}>
 		<Hero>
-			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<!-- <Badge title="il ristorante italiana" /> -->
-				<h1 class="font-black">親なきあと問題を解決する</h1>
-
+			<div
+				slot="hero-content-left"
+				class="prose max-w-none max-lg:order-1"
+			>
+				<h1 class="font-black">子どもを護る、<br />記録のバトン。</h1>
 				<p>
-					親なきあとに向けた「記憶」と「共有」
+					「ファミリアノート」は、障害のある子を支えるために、
+					親だからこそ知っている大切な情報や、日常の支援の様子を記録し、未来へつなぐアプリです。
 				</p>
-
-				<!-- <span class="text-brand-green font-medium">✔ We also deliver</span>
-
-				<div class="mt-8 flex items-center gap-x-8">
-					<Button url="/book">Book now</Button>
-					<ButtonCallUs />
-				</div> -->
+				<p>
+					“親なきあと”に必要な情報をまとめ、障害のある子の未来を支援者へ託すことができます。
+					親なきあとも、子どもが安心して暮らせるように。
+					「子どもを護る、記録のバトン。」を、今ここから。
+				</p>
 			</div>
 			<div slot="hero-content-right">
 				<Picture
@@ -54,162 +52,101 @@ import Mussels from "~/assets/images/mussels2.png";
 		</Hero>
 	</Section>
 
-	<WideImage image={DecorativeImage} alt="Just an image" class:list={"aspect-video lg:aspect-[16/6]"} />
+	<WideImage
+		image={DecorativeImage}
+		alt="Just an image"
+		class:list={"aspect-video lg:aspect-[16/6]"}
+	/>
 
 	<Section class:list={"bg-white"}>
 		<Heading>
-			<h2 slot="heading-title" class="font-black text-brand-green h2">親なきあと問題とは</h2>
+			<h2 slot="heading-title" class="font-black text-brand-green h2">
+				親なきあとに、安心を残せる。
+			</h2>
 			<p slot="heading-content">
-				身体的・精神的・知的等の障がいを持っている子が、
-				親が先になくなった後でも幸せな人生を送れるようにすること。
-				これが「親なきあと問題」といわれるものです。
-				親が生きていて元気なうちにどのように問題に備えるかも重要となります。
+				親だからこそ知っている、大切な情報があります。
+				病歴や服薬の記録、好き嫌いやコミュニケーションの工夫、将来の希望や支援方針…。
+				ファミリアノートなら、それらを一つの場所に整理して残しておくことができます。
+			</p>
+			<p slot="heading-content">
+				あなたがそばにいなくても、子どもを理解するための“道しるべ”が未来に残ります。
+				それが、親なきあとも子どもが安心して暮らせる基盤になります。
 			</p>
 		</Heading>
-
-		<!-- <Grid>
-			<div slot="grid-content-1">
-				<div class="flex flex-col items-center prose text-center">
-					<Picture
-						class:list={"not-prose w-full h-auto"}
-						src={Pizza}
-						formats={["avif", "webp"]}
-						alt="A description of my image."
-					/>
-					<h3 class="h4 mt-0 font-black">Pasta &amp; Spaghetti</h3>
-					<p>
-						Pasta is a staple of Italian cuisine, with a rich history dating back centuries. It comes in
-						various shapes and sizes, each suited to different sauces and preparations.
-					</p>
-				</div>
-			</div>
-
-			<div slot="grid-content-2">
-				<div class="flex flex-col items-center prose text-center">
-					<Picture
-						class:list={"not-prose w-full h-auto"}
-						src={Spaghetti}
-						formats={["avif", "webp"]}
-						alt="A description of my image."
-					/>
-					<h3 class="h4 mt-0 font-black">Pasta &amp; Spaghetti</h3>
-					<p>
-						Pasta is a staple of Italian cuisine, with a rich history dating back centuries. It comes in
-						various shapes and sizes, each suited to different sauces and preparations.
-					</p>
-				</div>
-			</div>
-
-			<div slot="grid-content-3">
-				<div class="flex flex-col items-center prose text-center">
-					<Picture
-						class:list={"not-prose w-full h-auto"}
-						src={Fish}
-						formats={["avif", "webp"]}
-						alt="A description of my image."
-					/>
-					<h3 class="h4 mt-0 font-black">Pasta &amp; Spaghetti</h3>
-					<p>
-						Pasta is a staple of Italian cuisine, with a rich history dating back centuries. It comes in
-						various shapes and sizes, each suited to different sauces and preparations.
-					</p>
-				</div>
-			</div>
-		</Grid> -->
 	</Section>
 
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose lg:order-2">
-				<h1 class="font-black">アプリ名</h1>
-
-				<p>
-					何らかの説明１
-				</p>
-
-				<p>
-					何らかの説明２
-				</p>
-
-				<!-- <div class="mt-8">
-					<Button url="/menu">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							class="size-5 inline-block"
-							aria-hidden="true"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-								clip-rule="evenodd"></path>
-						</svg>
-						View menu
-					</Button>
-				</div> -->
+				<h3 class="font-black">記録できる内容の一例</h3>
+				<ul>
+					<li>各支援者からの日常生活投稿</li>
+					<li>
+						本人の好き嫌い、得意不得意 ・コミュニケーションの注意点
+					</li>
+					<li>医療情報や服薬の記録 ・福祉サービスや手続きの情報</li>
+					<li>緊急時の連絡先 ・親自身の希望や教育方針、支援方針</li>
+				</ul>
 			</div>
-			<div slot="hero-content-right">
+			<div
+				slot="hero-content-right"
+				style="padding: 10px; background: #999;"
+			>
 				<Picture
 					class:list={"mx-auto"}
-					src={Eyecatch}
-					height={600}
+					src={App01mage}
+					height={800}
 					formats={["avif", "webp"]}
-					alt="A description of my image."
+					alt="アプリの画面イメージ"
 				/>
 			</div>
 		</Hero>
 	</Section>
 
 	<Section class:list={"bg-white"}>
-		<Hero>
-			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge color="red" title="介護をされる方" />
-				<h2 class="font-black h2 !my-4">親心のきろく</h2>
-
-				<!-- <span class="text-brand-red text-2xl font-bold italic">Fresh Mussels!</span> -->
-
-				<p>
-					お子様の情報を記録し、支援者の方々と共有することができます。
-					また、〜〜〜
-				</p>
-
-				<!-- <div class="mt-8">
-					<Button color="red" url="/book">Book now</Button>
-				</div> -->
-			</div>
-			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={Eyecatch}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-				/>
-			</div>
-		</Hero>
+		<Heading>
+			<h2 slot="heading-title" class="font-black text-brand-green h2">
+				みんなで見守り、記録と共有。
+			</h2>
+			<p slot="heading-content">
+				子どもを支えるのは親だけではありません。
+				養護学校の先生、就労支援のスタッフ、相談室、グループホームの支援者…。
+				日々関わるさまざまな支援者が、ファミリアノートに子どもの様子を投稿できます。
+			</p>
+			<p slot="heading-content">
+				学校での成長、施設での生活の工夫、支援者だから気づけた小さな変化。
+				それらが一つに集まり、子どもの暮らしをまるごと記録していきます。
+			</p>
+			<p slot="heading-content">
+				支援者が変わっても、この記録を見ればすぐに子どものことがわかる。
+				みんなで見守り、みんなで残す――それが、ファミリアノートの強みです。
+			</p>
+		</Heading>
 	</Section>
 
-	<!-- Reviews -->
 	<Section class:list={"bg-brand-red/20 relative"}>
 		<div class="py-16">
 			<Hero>
-				<div slot="hero-content-left" class="prose max-w-none order-2">
-					<div class="text-center not-prose">
-						<Badge color="white" title="お客様の声" />
-					</div>
-					<h2 slot="heading-title" class="font-black h4 text-center mt-0 mb-4">アプリの開発に対する皆様のご意見</h2>
+				<div slot="hero-content-left" class="prose max-w-none">
+					<h2 class="text-center not-prose">
+						<Badge color="white" title="導入ストーリー" />
+					</h2>
 					<div slot="heading-content">
-						<p class="text-center">
-							何らかの説明
-						</p>
-
-						<ReviewSlider />
+						<ul>
+							<li>Aさん：知的障害のある18歳</li>
+							<li>
+								母親：高齢で健康面が不安なため、親なきあとへの備えを検討
+							</li>
+							<li>
+								支援者：養護学校教諭、就労支援スタッフ、グループホーム支援員
+							</li>
+							<li>成年後見人：母親が高齢になってから関与</li>
+						</ul>
 					</div>
 				</div>
 
 				<div slot="hero-content-right">
-					<Picture src={reviewAuthors} alt="Review authors" class="w-full h-auto" />
+					<StorySlider />
 				</div>
 			</Hero>
 		</div>
@@ -238,84 +175,80 @@ import Mussels from "~/assets/images/mussels2.png";
 		</svg>
 	</Section>
 
-	<!-- Desserts -->
 	<Section class:list={"bg-white"}>
-		<Hero>
-			<div slot="hero-content-left" class="prose max-w-none order-2">
-				<Badge title="機能1" />
-				<h2 slot="heading-title" class="font-black text-brand-green h2 !my-4">支援者との情報共有</h2>
-				<div slot="heading-content">
-					<p>
-						支援者同士の情報共有ができます
-					</p>
-
-					<!-- <div class="mt-8">
-						<Button url="/menu">See our menu</Button>
-					</div> -->
-				</div>
-			</div>
-
-			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={Eyecatch}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-				/>
-			</div>
-		</Hero>
+		<h2 class="text-brand-green h2 mb-8">ファミリアノートが生まれた背景</h2>
+		<p class="font-bold">
+			このアプリ「ファミリアノート」は、親なきあと問題相談室ファミリアから生まれました。
+		</p>
+		<p>
+			ファミリアでは、これまで「親なきあと」に直面するご家庭を支え、親なきあとに向けた対策や、親を亡くしたあとの子どもの生活支援、さらには後見人として子どもの家族代わりとなる活動を行ってきました。
+		</p>
+		<p>
+			ファミリアが願ってきたのは、ただ生活を守るだけではありません。
+			障害のある子どもたちの
+			権利が護られ、より幸せに暮らせる社会をつくりたい。
+			その思いの中で、2つの大きな課題が見えてきました。
+		</p>
+		<hr class="my-8 border-t border-brand-green" />
+		<p class="font-bold">
+			親の情報が途切れてしまうこと 病歴、服薬、日常の工夫、将来の希望…。
+		</p>
+		<p>
+			親だからこそ知っている情報は数多くあります。
+			けれども親なきあと、それらは誰にも伝わらないまま消えてしまうことも少なくありません。
+		</p>
+		<p>
+			親の思いを受け継いで業務を行うことは、子どもの幸せに大きくつながる――そう気づいたのです。
+		</p>
+		<hr class="my-8 border-t border-brand-green" />
+		<p class="font-bold">支援者同士の情報共有の不足</p>
+		<p>
+			子どもを支えるのは、グループホーム、学校教諭、就労支援、相談支援、そして後見人など、多くの関係者です。
+		</p>
+		<p>
+			しかし子どもの支援態勢によっては、支援者同士の情報共有がなされていなかったり、支援者の交代などにより情報が途切れてしまうことが散見されます。
+			支援者がそれぞれの立場からの情報を持ち寄り記録しておくことで、子どもをより深く理解し、より良い支援につなげることができます。
+		</p>
+		<hr class="my-8 border-t border-brand-green" />
+		<p class="font-bold">
+			その解決策として生まれたのが「ファミリアノート」
+		</p>
+		<p>
+			親の大切な情報を未来へ残し、支援者みんなで子どもの記録を積み重ねる。
+			そして、新しい支援者が関わるときも、その記録が“道しるべ”となる。
+		</p>
+		<p>
+			「ファミリアノート」は、親なきあとに備えた安心のために、
+			そして子どもたちがより幸せに生活できるように生まれたアプリです。
+		</p>
 	</Section>
 
-	<!-- Contact -->
-	<Section class:list={"bg-white"}>
-		<Hero>
-			<div slot="hero-content-left" class="prose max-w-none">
-				<Badge color="red" title="機能2" />
-				<h2 slot="heading-title" class="font-black text-brand-red h2 !my-4">スムーズな介護の引き継ぎ</h2>
-				<div slot="heading-content">
-					<p>
-						介護に必要な情報が記録できます
-					</p>
-
-					<!-- <div class="mt-8">
-						<Button color="red" url="/book">Book a table</Button>
-					</div> -->
-				</div>
-			</div>
-
-			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={Eyecatch}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-				/>
-			</div>
-		</Hero>
-	</Section>
-
-<!-- Reviews -->
 	<Section class:list={"bg-brand-green/20 relative"}>
-		<div class="py-16">
+		<div class="py-2">
 			<Hero>
 				<div slot="hero-content-left" class="prose max-w-none order-2">
 					<div class="text-center not-prose">
 						<Badge color="white" title="Appreciation" />
 					</div>
-					<h2 slot="heading-title" class="font-black h4 text-center mt-0 mb-4">スポンサーの皆様</h2>
-					<div slot="heading-content">
+					<h2
+						slot="heading-title"
+						class="font-black h4 text-center mt-0 mb-4"
+					>
+						このサービスはスポンサーの皆様のご支援により無料で利用できます。
+					</h2>
+					<!-- <div slot="heading-content">
 						<p class="text-center">
-							このサービスはスポンサーの方々のご支援により無料で利用できます。
+							このサービスはスポンサーの皆様のご支援により無料で利用できます。
 						</p>
-
-						<ReviewSlider />
-					</div>
+					</div> -->
 				</div>
 
 				<div slot="hero-content-right">
-					<Picture src={reviewAuthors} alt="Review authors" class="w-full h-auto" />
+					<Picture
+						src={FlowersImage}
+						alt="Appreciation"
+						class="w-full h-auto"
+					/>
 				</div>
 			</Hero>
 		</div>
@@ -343,5 +276,24 @@ import Mussels from "~/assets/images/mussels2.png";
 			></path>
 		</svg>
 	</Section>
-
+	<Section class:list={"bg-white"}>
+		<h2 class="text-brand-green h2 mb-8 text-center">スポンサーの皆様</h2>
+		<SponcerGrid />
+	</Section>
+	<Section class:list={"bg-white"}>
+		<div>
+			<h5 class="font-black text-center">
+				ご協賛に関するお問い合わせは〜親なきあと問題相談室ファミリアまで
+			</h5>
+			<div class="text-center mt-6">
+				<Button
+					url="https://oyanakiato-familiar.com/contact"
+					color="green"
+					newtab={true}
+				>
+					お問い合わせ
+				</Button>
+			</div>
+		</div>
+	</Section>
 </Layout>

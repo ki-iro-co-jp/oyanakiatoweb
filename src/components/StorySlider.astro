@@ -1,0 +1,97 @@
+<div class="swiper w-full mt-8 bg-white rounded-lg">
+	<div class="swiper-wrapper h-auto w-auto pt-8 pb-12">
+		<div class="swiper-slide select-none">
+			<div class="px-4 lg:px-8">
+				<h4>STEP1：親が情報を整理</h4>
+				<p class="text-balance mt-4">
+					母親は、Aさんの病歴、服薬情報、好き嫌い、生活上の工夫、将来の希望などを整理。
+					「ファミリアノート」に記録することで、Aさんの生活に関わる重要な情報を一元管理。
+					「私がいなくなっても、Aのことを誰かが理解できるように残しておきたい」
+					安心感が生まれる瞬間です。
+				</p>
+			</div>
+		</div>
+		<div class="swiper-slide select-none">
+			<div class="px-4 lg:px-8">
+				<h4>STEP2：学生時代の支援者と共有</h4>
+				<p class="text-balance mt-4">
+					Aさんが学生の時代は、養護学校の教諭と母親が中心にやり取り。
+					日々の生活や学習の様子、学校での工夫や小さな成長をアプリに記録し、親が参照。
+					母親と教諭の間で情報を共有することで、より個別に合わせた支援が可能になります。
+				</p>
+			</div>
+		</div>
+		<div class="swiper-slide select-none">
+			<div class="px-4 lg:px-8">
+				<h4>STEP3：就労支援への引き継ぎ</h4>
+				<p class="text-balance mt-4">
+					卒業後、養護教諭は支援から離れ、就労支援員が新たに関わることに。
+					就労支援員は、母親が残した情報や養護教諭の記録を確認し、Aさんの特性や好みを把握。
+					それをもとに、就労や日中活動の支援計画を立て、より適切な支援を提供します。
+				</p>
+			</div>
+		</div>
+		<div class="swiper-slide select-none">
+			<div class="px-4 lg:px-8">
+				<h4>STEP4：グループホームへの移行</h4>
+				<p class="text-balance mt-4">
+					時間が経ち、Aさんは親元を離れ、グループホームで生活を開始。
+					相談室では、ファミリアノートに蓄積された情報をもとに、Aさんに最適なグループホームを選定。
+					過去の生活習慣や特性を考慮することで、安心して暮らせる環境を提供します。
+				</p>
+			</div>
+		</div>
+		<div class="swiper-slide select-none">
+			<div class="px-4 lg:px-8">
+				<h4>STEP5：グループホームでの記録と支援</h4>
+				<p class="text-balance mt-4">
+					グループホームでの生活では、支援員がファミリアノートを参照し、Aさんのことを把握。
+					特にアレルギーや服薬、コミュニケーション上の注意点などは、入念に確認。
+					日々の様子をアプリに記録することで、支援者間の情報共有もスムーズになります。
+				</p>
+			</div>
+		</div>
+		<div class="swiper-slide select-none">
+			<div class="px-4 lg:px-8">
+				<h4>STEP6：成年後見人の登場</h4>
+				<p class="text-balance mt-4">
+					母親の高齢化に伴い、成年後見人が就任。
+					後見人は親の意向やAさんの個性を尊重しながら業務を遂行。
+					同時に、親なきあとに備えてアプリの管理者となり、支援者や情報を整理・管理します。
+				</p>
+			</div>
+		</div>
+		<div class="swiper-slide select-none">
+			<div class="px-4 lg:px-8">
+				<h4>STEP7：みんなで支援</h4>
+				<p class="text-balance mt-4">
+					家族と支援者がファミリアノートを通して情報を共有することで、Aさんの生活は途切れず、安全で豊かに支えられます。
+					親なきあとも、支援者みんなで記録を共有し、子どもが安心して暮らせる――
+					それが「ファミリアノート」の力です。
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-pagination"></div>
+</div>
+
+<script>
+	import Swiper from "swiper";
+	import { Pagination } from "swiper/modules";
+	import "swiper/css";
+	import "swiper/css/pagination";
+
+	document.addEventListener("astro:page-load", () => {
+		const swiper = document.querySelector(".swiper") as HTMLElement;
+		new Swiper(swiper, {
+			modules: [Pagination],
+			loop: true,
+			slidesPerView: 1,
+			spaceBetween: 32,
+			autoplay: false,
+			pagination: {
+				el: ".swiper-pagination",
+			},
+		});
+	});
+</script>

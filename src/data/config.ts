@@ -3,7 +3,7 @@ export const siteLang = "ja-JP";
 export const siteCurrency = "JPY";
 export const siteDomain = "astropie.com";
 export const siteName = "ファミリアノート";
-export const siteSlogan = "親なきあと問題を解決する";
+export const siteSlogan = "子どもを護る、記録のバトン。";
 export const themeColor = "#009E96";
 
 export const phone = {
