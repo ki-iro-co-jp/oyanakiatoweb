@@ -74,24 +74,3 @@
 	</div>
 	<div class="swiper-pagination"></div>
 </div>
-
-<script>
-	import Swiper from "swiper";
-	import { Pagination } from "swiper/modules";
-	import "swiper/css";
-	import "swiper/css/pagination";
-
-	document.addEventListener("astro:page-load", () => {
-		const swiper = document.querySelector(".swiper") as HTMLElement;
-		new Swiper(swiper, {
-			modules: [Pagination],
-			loop: true,
-			slidesPerView: 1,
-			spaceBetween: 32,
-			autoplay: false,
-			pagination: {
-				el: ".swiper-pagination",
-			},
-		});
-	});
-</script>

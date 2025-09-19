@@ -11,9 +11,10 @@ import Eyecatch from "~/assets/images/couple-5184589_1280_hero.png";
 import DecorativeImage from "~/assets/images/hospice-1797305_1280.jpg";
 import App01mage from "~/assets/images/app_image01.png";
 import FlowersImage from "~/assets/images/flowers.png";
-import StorySlider from "~/components/StorySlider.astro";
+import StorySliderA from "~/components/StorySliderA.astro";
 import SponcerGrid from "~/components/SponcerGrid.astro";
 import Button from "~/components/Button.astro";
+import StorySliderB from "~/components/StorySliderB.astro";
 ---
 
 <Layout
@@ -129,7 +130,7 @@ import Button from "~/components/Button.astro";
 			<Hero>
 				<div slot="hero-content-left" class="prose max-w-none">
 					<h2 class="text-center not-prose">
-						<Badge color="white" title="導入ストーリー" />
+						<Badge color="white" title="導入ストーリー1" />
 					</h2>
 					<div slot="heading-content">
 						<ul>
@@ -146,9 +147,35 @@ import Button from "~/components/Button.astro";
 				</div>
 
 				<div slot="hero-content-right">
-					<StorySlider />
+					<StorySliderA />
 				</div>
 			</Hero>
+			<hr class="my-8 border-t border-brand-red" />
+			<Hero>
+				<div slot="hero-content-left" class="prose max-w-none">
+					<h2 class="text-center not-prose">
+						<Badge color="white" title="導入ストーリー2" />
+					</h2>
+					<div slot="heading-content">
+						<ul>
+							<li>Bさん：精神障害のある40歳</li>
+							<li>
+								父親：70歳、親なきあとへの備えを検討し始める
+							</li>
+							<li>
+								支援者：就労支援員、相談支援員、グループホーム支援員
+							</li>
+							<li>成年後見人：父親が高齢になってから就任</li>
+						</ul>
+					</div>
+				</div>
+				<div slot="hero-content-right">
+					<StorySliderB />
+				</div>
+			</Hero>
+			<p class="mt-8 font-bold">
+				このように、本人に配慮が必要な状況に対応できる情報の一元化と、親なきあとも含めた支援の継続が「ファミリアノート」の強みです。
+			</p>
 		</div>
 
 		<svg
@@ -297,3 +324,27 @@ import Button from "~/components/Button.astro";
 		</div>
 	</Section>
 </Layout>
+
+<script>
+	import Swiper from "swiper";
+	import { Pagination } from "swiper/modules";
+	import "swiper/css";
+	import "swiper/css/pagination";
+
+	document.addEventListener("astro:page-load", () => {
+		const swipers = document.querySelectorAll<HTMLElement>(".swiper");
+
+		swipers.forEach((el) => {
+			new Swiper(el, {
+				modules: [Pagination],
+				loop: true,
+				slidesPerView: 1,
+				spaceBetween: 32,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+			});
+		});
+	});
+</script>
