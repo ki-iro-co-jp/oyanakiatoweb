@@ -6,7 +6,7 @@ export const menuMain = [
     },
     {
         name: "アプリを使ってみる",
-        url: "https://oyanakiato.vercel.app/",
+        url: "https://familiar-note.ki-iro.co.jp",
         highlighted: true,
     },
 ];
