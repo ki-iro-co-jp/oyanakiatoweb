@@ -250,6 +250,32 @@ import StorySliderB from "~/components/StorySliderB.astro";
 		</p>
 	</Section>
 
+	<Section class:list={"bg-white"}>
+		<h2 class="text-brand-green h2 mb-8">サービス紹介動画</h2>
+		<div class="w-full">
+			<div class="hidden md:block aspect-video">
+				<iframe
+					class="hidden md:block w-full h-full"
+					src="https://www.youtube.com/embed/2mwU4X79CbA?si=uJ1pq8uwCw_FPO8T"
+					title="親なきあと問題解決へのアプリケーション／ファミリアノート"
+					frameborder="0"
+					allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen></iframe>
+			</div>
+			<div class="block md:hidden aspect-[9/16]">
+				<iframe
+					class="block md:hidden w-full h-full"
+					src="https://www.youtube.com/embed/kSdoydY3AsM"
+					title="親なきあと問題解決へのアプリケーション／ファミリアノート"
+					frameborder="0"
+					allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen></iframe>
+			</div>
+		</div>
+	</Section>
+
 	<Section class:list={"bg-brand-green/20 relative"}>
 		<div class="py-2">
 			<Hero>
@@ -319,6 +345,41 @@ import StorySliderB from "~/components/StorySliderB.astro";
 					newtab={true}
 				>
 					お問い合わせ
+				</Button>
+			</div>
+		</div>
+	</Section>
+	<Section class:list={"bg-white"}>
+		<div>
+			<h5 class="font-black text-center">
+				エンジニア・デザイナーを募集しています
+			</h5>
+			<h6 class="font-black text-center mt-8" style="font-size: 14px;">
+				エンジニア応募要件
+			</h6>
+			<ul class="max-w-md mx-auto mt-2">
+				<li>開発経験：5年以上</li>
+				<li>バックエンド：2つ以上の言語を経験</li>
+				<li>フロントエンド：HTML、CSS、TypeScriptの経験</li>
+				<li>DB：RDBの設計、SQLを用いたアプリケーション開発</li>
+				<li>その他必須要件：基本・詳細設計、Git</li>
+				<li>歓迎要件：CI/CDの構築経験、モバイルアプリ開発</li>
+			</ul>
+
+			<h6 class="font-black text-center mt-6" style="font-size: 14px;">
+				デザイナー応募要件
+			</h6>
+			<ul class="max-w-md mx-auto mt-2">
+				<li>実務経験：5年以上</li>
+			</ul>
+
+			<div class="text-center mt-6">
+				<Button
+					url="https://forms.gle/EJF5PFgYq3njeAs68"
+					color="green"
+					newtab={true}
+				>
+					応募する
 				</Button>
 			</div>
 		</div>
