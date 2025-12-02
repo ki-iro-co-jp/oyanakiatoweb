@@ -4,49 +4,54 @@
     "plates": {
       "type": "object",
       "properties": {
-        "slug": {
-          "type": "string"
-        },
-        "prettyName": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "plates": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "price": {
-                "type": "number"
-              }
-            },
-            "required": [
-              "name",
-              "description",
-              "price"
-            ],
-            "additionalProperties": false
-          }
-        },
         "$schema": {
           "type": "string"
         }
       },
-      "required": [
-        "slug",
-        "prettyName",
-        "description",
-        "plates"
-      ],
-      "additionalProperties": false
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "prettyName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "plates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "name",
+                "description",
+                "price"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "slug",
+          "prettyName",
+          "description",
+          "plates"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "$schema": "http://json-schema.org/draft-07/schema#"
