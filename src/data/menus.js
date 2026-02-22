@@ -10,31 +10,13 @@ export const menuMain = [
         highlighted: true,
     },
 ];
-
-export const footerPrimary = [
+export const footer = [
     {
-        title: "Navigatie",
-        items: [
-            { name: "home", url: "/" },
-        ],
+        name: "個人情報保護方針",
+        url: "/privacy",
     },
-];
-
-export const footerSecondary = [
     {
-        title: "support",
-        items: [
-            { name: "pricing", url: "/pricing" },
-        ],
-    },
-];
-
-export const footerTertiary = [
-    {
-        title: "Links",
-        items: [
-            { name: "privacybeleid", url: '/privacy-policy' },
-            { name: "api status", url: "/api-status" },
-        ],
+        name: "利用規約",
+        url: "/terms",
     },
 ];

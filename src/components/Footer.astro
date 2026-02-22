@@ -1,5 +1,5 @@
 ---
-import { menuMain } from "~/data/menus";
+import { menuMain, footer } from "~/data/menus";
 const currentYear = new Date().getFullYear();
 import { siteName } from "~/data/config";
 ---
@@ -15,6 +15,18 @@ import { siteName } from "~/data/config";
 		>
 			{
 				menuMain.map((item) => (
+					<a href={item.url} class="hover:underline">
+						{item.name}
+					</a>
+				))
+			}
+		</nav>
+		<nav
+			class="flex flex-col sm:flex-row items-center justify-center gap-x-12 gap-y-3 font-medium mt-2"
+			aria-label="Footer"
+		>
+			{
+				footer.map((item) => (
 					<a href={item.url} class="hover:underline">
 						{item.name}
 					</a>
