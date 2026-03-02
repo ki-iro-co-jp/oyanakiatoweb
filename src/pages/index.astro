@@ -15,6 +15,9 @@ import StorySliderA from "~/components/StorySliderA.astro";
 import SponcerGrid from "~/components/SponcerGrid.astro";
 import Button from "~/components/Button.astro";
 import StorySliderB from "~/components/StorySliderB.astro";
+
+import appStore from "~/assets/images/app_store.svg";
+import playStore from "~/assets/images/play_store.svg";
 ---
 
 <Layout
@@ -333,6 +336,41 @@ import StorySliderB from "~/components/StorySliderB.astro";
 		<h2 class="text-brand-green h2 mb-8 text-center">スポンサーの皆様</h2>
 		<SponcerGrid />
 	</Section>
+
+	<Section class:list={"bg-white"}>
+		<h2 class="text-brand-green h4 mb-8 text-center">アプリダウンロード</h2>
+
+		<div
+			class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
+		>
+			<a
+				href="https://apps.apple.com/us/app/id6753338947"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<img
+					src={appStore.src}
+					alt="App Storeからダウンロード"
+					class="h-12 w-auto hover:opacity-80 transition"
+					height="35"
+				/>
+			</a>
+
+			<a
+				href="https://play.google.com/store/apps/details?id=jp.co.kiiro.familiarnote"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<img
+					src={playStore.src}
+					alt="Google Playeからダウンロード"
+					class="h-12 w-auto hover:opacity-80 transition"
+					height="35"
+				/>
+			</a>
+		</div>
+	</Section>
+
 	<Section class:list={"bg-white"}>
 		<div>
 			<h5 class="font-black text-center">
@@ -349,6 +387,7 @@ import StorySliderB from "~/components/StorySliderB.astro";
 			</div>
 		</div>
 	</Section>
+
 	<Section class:list={"bg-white"}>
 		<div>
 			<h5 class="font-black text-center">

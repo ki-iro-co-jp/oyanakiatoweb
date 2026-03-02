@@ -1,7 +1,10 @@
 ---
 import { menuMain, footer } from "~/data/menus";
-const currentYear = new Date().getFullYear();
 import { siteName } from "~/data/config";
+import appStore from "~/assets/images/app_store.svg";
+import playStore from "~/assets/images/play_store.svg";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="bg-brand-green text-white">
@@ -9,6 +12,7 @@ import { siteName } from "~/data/config";
 		<p class="text-center font-bold text-4xl text-white">
 			ファミリアノート
 		</p>
+
 		<nav
 			class="flex flex-col sm:flex-row items-center justify-center gap-x-12 gap-y-3 font-medium mt-6"
 			aria-label="Footer"
@@ -21,6 +25,7 @@ import { siteName } from "~/data/config";
 				))
 			}
 		</nav>
+
 		<nav
 			class="flex flex-col sm:flex-row items-center justify-center gap-x-12 gap-y-3 font-medium mt-2"
 			aria-label="Footer"
@@ -33,6 +38,37 @@ import { siteName } from "~/data/config";
 				))
 			}
 		</nav>
+
+		<div
+			class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
+		>
+			<a
+				href="https://apps.apple.com/us/app/id6753338947"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<img
+					src={appStore.src}
+					alt="App Storeからダウンロード"
+					class="h-12 w-auto hover:opacity-80 transition"
+					height="35"
+				/>
+			</a>
+
+			<a
+				href="https://play.google.com/store/apps/details?id=jp.co.kiiro.familiarnote"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<img
+					src={playStore.src}
+					alt="Google Playeからダウンロード"
+					class="h-12 w-auto hover:opacity-80 transition"
+					height="35"
+				/>
+			</a>
+		</div>
+
 		<p class="mt-10 text-center text-sm">
 			&copy; {currentYear}
 			{siteName}. All rights reserved.
